@@ -13,8 +13,8 @@ export const PokemonCard:NextPage<Props> = ({poke}) => {
     push(`/name/${poke.name}`)
   }
   return (
-      <Grid xs={6} sm={3} md={2} xl={1} >
-      <div onClick={onClick}>
+      <Grid xs={6} sm={3} md={2} xl={1} onClick={onClick} >
+      <Card isHoverable >
         <Card.Body css={{p:1}} >
           <Card.Image
           src={poke.img}
@@ -28,7 +28,7 @@ export const PokemonCard:NextPage<Props> = ({poke}) => {
             <Text>#{poke.id}</Text>
           </Row>
         </Card.Footer>
-      </div>
+      </Card>
     </Grid>
   )
 }
